@@ -94,6 +94,7 @@ def disk():
 def main():
     try:
         while True:
+            # get the monitor data and convert to json
             monitor_json = json.dumps({
                 "cpu": cpu(),
                 "ram": ram(),
@@ -104,11 +105,13 @@ def main():
                 "disk": disk(),
                 #"disk_free": disk_free(),
             })
+
+            # write to json file
             with open("monitor.json", "w") as text_file:
                 text_file.write(monitor_json)
-            # print monitor_json
-            # print " "
-            interval = 2
+                
+            # refresh every 5 seconds
+            interval = 5
             time.sleep(interval)
     except (KeyboardInterrupt, SystemExit):
         pass
