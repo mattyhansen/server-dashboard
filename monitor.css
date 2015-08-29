@@ -1,0 +1,51 @@
+/**
+ * Style for load monitor
+ */
+.wrapper {
+  margin: 0 auto 0 auto;
+  width: 600px;
+  font-family: 'Quicksand', sans-serif;
+}
+.box {
+  width: 300px;
+  height: 180px;
+  float: left;
+  color: white;
+}
+.full {
+  width: 600px;
+}
+.title {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+}
+.value {
+  display: block;
+  text-align: center;
+  font-size: 2.5em;
+}
+.black {
+  background-color: black;
+}
+.orange {
+  background-color: orange;
+}
+.orangered {
+  background-color: orangered;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: mediumpurple;
+}
+.blue {
+  background-color: dodgerblue;
+}
+.grey {
+  background-color: darkgrey;
+}
+.pink {
+  background-color: hotpink;
+}

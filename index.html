@@ -1,1 +1,43 @@
-serverdashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Dashboard</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:400' rel='stylesheet' type='text/css'>
+  <script src="monitor.js"></script>
+  <link href='monitor.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="black">
+<div class="wrapper">
+  <div id='cpuUsage' class="box orange">
+    <span class="title">CPU Usage</span>
+    <span class="value"></span>
+  </div>
+  <div id='cpuCount' class="box orangered">
+    <span class="title">CPU Count</span>
+    <span class="value"></span>
+  </div>
+  <div id='serverLoad' class="box full green">
+    <span class="title">Load Average</span>
+    <span class="value"></span>
+  </div>
+  <div id='freeRam' class="box purple">
+    <span class="title">Free RAM</span>
+    <span class="value"></span>
+  </div>
+  <div id='diskFreeSpace' class="box blue">
+    <span class="title">Disk Usage</span>
+    <span class="value"></span>
+  </div>
+  <div id='networkReceived' class="box grey">
+    <span class="title">Data Received</span>
+    <span class="value"></span>
+  </div>
+  <div id='networkSent' class="box pink">
+    <span class="title">Data Sent</span>
+    <span class="value"></span>
+  </div>
+</div>
+</body>
+</html>
