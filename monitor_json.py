@@ -71,7 +71,7 @@ def network_received():
     bytes_rcvd = bytes2human(stats['after'].bytes_recv - stats['before'].bytes_recv) + '/s'
     return bytes_rcvd
 
-# print disk
+# free disk space
 def disk_free():
     statvfs = os.statvfs('/')
     # Size of filesystem in bytes
@@ -84,6 +84,7 @@ def disk_free():
     # print "Disk Usage: " + disk_free
     return disk_real_free
 
+# disk used as percentage
 def disk():
     vfs = os.statvfs('/')
     usedPercentage = 100.0 * float(vfs.f_blocks - vfs.f_bfree) / float(vfs.f_blocks - vfs.f_bfree + vfs.f_bavail)
@@ -101,6 +102,7 @@ def main():
                 "network_sent": network_sent(),
                 "network_received": network_received(),
                 "disk": disk(),
+                #"disk_free": disk_free(),
             })
             with open("monitor.json", "w") as text_file:
                 text_file.write(monitor_json)
