@@ -1,2 +1,5 @@
 # jetbrains
 .idea/
+
+# json file that stores the current monitor output
+monitor.json
