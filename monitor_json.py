@@ -72,7 +72,7 @@ def network_received():
     return bytes_rcvd
 
 # print disk
-def disk():
+def disk_free():
     statvfs = os.statvfs('/')
     # Size of filesystem in bytes
     # disk_size = bytes2human(statvfs.f_frsize * statvfs.f_blocks)
@@ -83,6 +83,11 @@ def disk():
     # print "Disk Usage: " + disk_size
     # print "Disk Usage: " + disk_free
     return disk_real_free
+
+def disk():
+    vfs = os.statvfs('/')
+    usedPercentage = 100.0 * float(vfs.f_blocks - vfs.f_bfree) / float(vfs.f_blocks - vfs.f_bfree + vfs.f_bavail)
+    return '%.2f% %' % (usedPercentage)
 
 # main
 def main():
@@ -97,9 +102,11 @@ def main():
                 "network_received": network_received(),
                 "disk": disk(),
             })
-            print monitor_json
-            print " "
-            interval = 10
+            with open("monitor.json", "w") as text_file:
+                text_file.write(monitor_json)
+            # print monitor_json
+            # print " "
+            interval = 2
             time.sleep(interval)
     except (KeyboardInterrupt, SystemExit):
         pass
