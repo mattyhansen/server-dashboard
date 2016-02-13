@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 ### USAGE:
-# sudo python monitor.py
+# sudo python monitor_json.py
 
 ### INSTALL:
 #if no pip: command not found, install:
