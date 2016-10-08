@@ -15,3 +15,8 @@ sudo pip install psutil --upgrade
 ```
 sudo python monitor_json.py
 ```
+
+### Example
+
+![monitor](https://cloud.githubusercontent.com/assets/4113603/19209618/c82efb84-8d59-11e6-87f0-81b8a1170dde.png)
+
