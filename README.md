@@ -18,5 +18,5 @@ sudo python monitor_json.py
 
 ### Example
 
-![monitor](https://cloud.githubusercontent.com/assets/4113603/19209618/c82efb84-8d59-11e6-87f0-81b8a1170dde.png)
+![monitor](https://cloud.githubusercontent.com/assets/4113603/19209645/8a83a16c-8d5a-11e6-905d-7e85b60368eb.png)
 
